@@ -1,0 +1,10 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/FilaHumana.Api/FilaHumana.Api.csproj" />
+    <Project Path="src/FilaHumana.Domain/FilaHumana.Domain.csproj" />
+    <Project Path="src/FilaHumana.Infrastructure/FilaHumana.Infrastructure.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/FilaHumana.Tests/FilaHumana.Tests.csproj" />
+  </Folder>
+</Solution>
