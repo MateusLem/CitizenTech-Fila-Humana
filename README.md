@@ -151,4 +151,3 @@ leituras de demonstração com padrão realista (pico de manhã e início da tar
 nos fins de semana) para o app e o cálculo de melhor horário terem o que exibir.
 
 > ⚠️ Esses registros são **fictícios, para demonstração** — nenhum dado pessoal real é usado.
-> A entrega de IA & ML usa apenas bases reais e públicas (ver `fontes-dados-ml.md`).
