@@ -1,0 +1,6 @@
+@FilaHumana.Api_HostAddress = http://localhost:5153
+
+GET {{FilaHumana.Api_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
