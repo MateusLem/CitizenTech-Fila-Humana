@@ -152,28 +152,3 @@ nos fins de semana) para o app e o cálculo de melhor horário terem o que exibi
 
 > ⚠️ Esses registros são **fictícios, para demonstração** — nenhum dado pessoal real é usado.
 > A entrega de IA & ML usa apenas bases reais e públicas (ver `fontes-dados-ml.md`).
-
----
-
-## Como esta base atende às duas rubricas
-
-### C# Software Development (10,0)
-
-| Critério | Nota | Onde está |
-|---|---|---|
-| POO | 3,0 | `Domain/Entities` com encapsulamento (`private set`), regras nos objetos, `IServicoLotacao`, `IRepositorio*` + DI |
-| Web API | 2,5 | `LocaisController` e `LeiturasController` RESTful, status codes, DTOs, validação |
-| EF Core + LINQ | 1,5 | `FilaHumanaContext` + Fluent API; `GroupBy`/`Average`/`OrderBy` no `ServicoLotacao` e nos repositórios |
-| Async/Await | 1,0 | Todos os métodos de repositório/serviço e endpoints são `async` com `CancellationToken` |
-| Qualidade do código | 2,0 | Camadas separadas, comentários XML, 22 testes passando, README |
-
-### SOA e Web Services (10,0)
-
-| Critério | Nota | Onde está |
-|---|---|---|
-| Estruturação do domínio | 3,0 | Projetos `Domain` · `Infrastructure` · `Api` — o domínio não depende do EF |
-| Conexão com banco | 3,0 | SQLite via `UseSqlite`, connection string no `appsettings.json`, repositórios com DI |
-| Migrações | 1,5 | Pasta `Migrations/` versionada (`InitialCreate`), `Database.Migrate()` na subida |
-| Documentação automática | 1,5 | Swagger gerado dos comentários XML (`/swagger`) |
-| Testes automatizados | 1,0 | `dotnet test` → 22 testes (xUnit + Moq + SQLite em memória) |
-
