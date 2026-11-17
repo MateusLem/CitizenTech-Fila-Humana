@@ -151,3 +151,33 @@ leituras de demonstração com padrão realista (pico de manhã e início da tar
 nos fins de semana) para o app e o cálculo de melhor horário terem o que exibir.
 
 > ⚠️ Esses registros são **fictícios, para demonstração** — nenhum dado pessoal real é usado.
+
+---
+
+## Provas de execução
+
+Capturas de tela obtidas com a API rodando (`dotnet run --project src/FilaHumana.Api`) e as
+requisições acessando o Swagger UI em `http://localhost:5153/swagger`.
+
+**Health check** — `GET /health` retorna `200 OK`:
+
+![Health check](assets/health.png)
+
+**Lista de locais** — `GET /api/locais` retorna os 4 locais monitorados:
+
+![Lista de locais](assets/locais.png)
+
+**Lotação atual** — `GET /api/locais/{id}/lotacao` com o status calculado
+(`Vazio`/`Confortavel`/`Movimentado`/`Lotado`):
+
+![Lotação atual](assets/lotacao.png)
+
+**Lotação de um local específico** — `GET /api/locais/{id}/lotacao` respondendo o detalhe
+de um local:
+
+![Lotação de local específico](assets/lotacal-especifico.png)
+
+**Melhor horário** — `GET /api/locais/{id}/melhor-horario?dias=30` com as horas mais vazias
+e de pico calculadas via LINQ sobre o histórico de leituras:
+
+![Melhor horário](assets/melhor-horario.png)
